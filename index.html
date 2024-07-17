@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/fonts.css" />
 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
 
     <style>
@@ -172,6 +173,13 @@
         margin-left: 2rem;
         margin-right: 2rem;
         border-left: 2px solid red;
+      }
+      #carouselExampleIndicators {
+        width: 85%;
+        align-self: center;
+        margin-left: auto;
+        margin-right: auto;
+        height: 30vh;
       }
     </style>
   </head>
@@ -732,14 +740,199 @@
         </div>
       </section>
 
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div
+              id="googleMap2"
+              style="
+                width: 100%;
+                height: 200px;
+                margin: auto;
+                margin-bottom: 2rem;
+              "
+            ></div>
+            <!-- <img
+              class="d-block w-100"
+              src="images/delhi-location.png"
+              alt="First slide"
+            /> -->
+          </div>
+          <div class="carousel-item">
+            <div
+              id="googleMap3"
+              style="
+                width: 100%;
+                height: 200px;
+                margin: auto;
+                margin-bottom: 2rem;
+              "
+            ></div>
+            <!-- <img
+              class="d-block w-100"
+              src="images/slider-1-slide-2-1770x742.jpg"
+              alt="Second slide"
+            /> -->
+          </div>
+          <div class="carousel-item">
+            <div
+              id="googleMap1"
+              style="
+                width: 100%;
+                height: 200px;
+                margin: auto;
+                margin-bottom: 2rem;
+              "
+            ></div>
+            <!-- <img
+              class="d-block w-100"
+              src="images/slider-1-slide-2-1770x742.jpg"
+              alt="Third slide"
+            /> -->
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+      <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div id="googleMap1" style="
+              width: 80%;
+              height: 400px;
+              margin: auto;
+              margin-bottom: 2rem;
+            "></div>
+            
+        
+          </div>
+          <div class="carousel-item">
+            <div id="googleMap2" style="
+              width: 80%;
+              height: 400px;
+              margin: auto;
+              margin-bottom: 2rem;
+            "></div>
+
+    
+          </div>
+          <div class="carousel-item">
+            <div id="googleMap3" style="
+              width: 80%;
+              height: 400px;
+              margin: auto;
+              margin-bottom: 2rem;
+            "></div>
+          
+          </div>
+        </div>
+       <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </button>
+      </div>
+
+      <div id="demo" class="carousel slide" data-ride="carousel">
+      
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
+  
+
+    <section class="section section-fluid">
+       
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <div
+              id="googleMap1"
+              style="
+                width: 80%;
+                height: 400px;
+                margin: auto;
+                margin-bottom: 2rem;
+              "
+            ></div>
+          </div>
+          <div class="item">
+            <div
+              id="googleMap2"
+              style="
+                width: 80%;
+                height: 400px;
+                margin: auto;
+                margin-bottom: 2rem;
+              "
+            ></div>
+          </div>
+          <div class="item">
+            <div
+              id="googleMap3"
+              style="
+                width: 80%;
+                height: 400px;
+                margin: auto;
+                margin-bottom: 2rem;
+              "
+            ></div>
+          </div>
+          <div class="item">
+            <div
+              id="googleMap4"
+              style="
+                width: 80%;
+                height: 400px;
+                margin: auto;
+                margin-bottom: 2rem;
+              "
+            ></div>
+          </div>
+        </div>
+      </section> -->
+
       <!-- RD Google Map-->
-      <section class="section section-fluid">
-        <!-- Google Map-->
+      <!-- <section class="section section-fluid">
+       
         <div
           id="googleMap"
           style="width: 80%; height: 400px; margin: auto; margin-bottom: 2rem"
         ></div>
-      </section>
+      </section> -->
       <!-- <button onclick="func()">Hi</button> -->
       <!-- <form
         id="myForm"
@@ -788,10 +981,10 @@
                     id="contact-your-name-2"
                     type="text"
                     name="entry.1024248838"
-                    data-constraints="@Required"
+                    required
                   />
                   <label class="form-label" for="contact-your-name-2"
-                    >Your Name</label
+                    >Your Name<span style="color: red">*</span></label
                   >
                 </div>
               </div>
@@ -802,9 +995,11 @@
                     id="contact-email-2"
                     type="email"
                     name="entry.1505075882"
-                    data-constraints="@Email @Required"
+                    required
                   />
-                  <label class="form-label" for="contact-email-2">E-mail</label>
+                  <label class="form-label" for="contact-email-2"
+                    >E-mail<span style="color: red">*</span></label
+                  >
                 </div>
               </div>
               <div class="col-md-4">
@@ -814,9 +1009,12 @@
                     id="contact-phone-2"
                     type="text"
                     name="entry.1091802609"
-                    data-constraints="@Numeric"
+                    pattern="\d+"
+                    required
                   />
-                  <label class="form-label" for="contact-phone-2">Phone</label>
+                  <label class="form-label" for="contact-phone-2"
+                    >Phone<span style="color: red">*</span></label
+                  >
                 </div>
               </div>
 
@@ -824,11 +1022,15 @@
                 <div class="form-wrap">
                   <input
                     class="form-input"
+                    id="contact-age-2"
                     type="text"
                     name="entry.631106756"
-                    data-constraints="@Numeric"
+                    min="1"
+                    required
                   />
-                  <label class="form-label">Age</label>
+                  <label class="form-label" for="contact-age-2"
+                    >Age<span style="color: red">*</span></label
+                  >
                 </div>
               </div>
 
@@ -838,7 +1040,9 @@
                   name="entry.1288768881"
                   required
                 >
-                  <option value="" selected disabled>City</option>
+                  <option value="" selected disabled>
+                    City<span style="color: red !important">*</span>
+                  </option>
 
                   <option value="Delhi">Delhi</option>
                   <option value="Kolkata">Kolkata</option>
@@ -852,8 +1056,11 @@
                   class="form-control btn btn-secondary dropdown-toggle form-input text-left"
                   id="genderSelect"
                   name="entry.1981334274"
+                  required
                 >
-                  <option value="" selected disabled>Occupation</option>
+                  <option value="" selected disabled>
+                    Occupation<span style="color: red !important">*</span>
+                  </option>
 
                   <option value="Professional">Professional</option>
                   <option value="Student">Student</option>
@@ -1132,19 +1339,46 @@
     </script>
 
     <script>
-      function myMap() {
-        var mapProp = {
-          center: new google.maps.LatLng(51.508742, -0.12085),
-          zoom: 5,
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: false,
+          margin: 2,
+          nav: true,
+
+          items: 1,
+        });
+      });
+
+      function initMap() {
+        var mapOptions = {
+          center: new google.maps.LatLng(18.96379515930403, 72.81703728719975), // Default coordinates
+          zoom: 15,
+          disableDefaultUI: true,
         };
-        var map = new google.maps.Map(
-          document.getElementById("googleMap"),
-          mapProp
+
+        var map1 = new google.maps.Map(
+          document.getElementById("googleMap1"),
+          mapOptions
+        );
+        var map2 = new google.maps.Map(
+          document.getElementById("googleMap2"),
+          mapOptions
+        );
+        var map3 = new google.maps.Map(
+          document.getElementById("googleMap3"),
+          mapOptions
+        );
+        var map4 = new google.maps.Map(
+          document.getElementById("googleMap4"),
+          mapOptions
         );
       }
+
+      // Initialize maps once the window loads
+      window.onload = initMap;
     </script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOVYRIgupAurZup5y1PRh8Ismb1A3lLao&libraries=places&callback=myMap"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&libraries=places&callback=myMap"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"
       integrity="sha512-lOrm9FgT1LKOJRUXF3tp6QaMorJftUjowOWiDcG5GFZ/q7ukof19V0HKx/GWzXCdt9zYju3/KhBNdCLzK8b90Q=="
