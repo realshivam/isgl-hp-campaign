@@ -18,6 +18,7 @@
     />
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/fonts.css" />
+
     <link rel="stylesheet" href="css/style.css" />
 
     <style>
@@ -47,6 +48,7 @@
       html {
         scroll-behavior: smooth;
       }
+
       .swiper-slider-classic .swiper-pagination-bullet::after {
         background: rgb(250, 128, 36);
         color: white;
@@ -71,6 +73,41 @@
           rgba(39, 34, 36, 1) 100%
         );
       }
+      /* Style the select element */
+      .form-control {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        position: relative; /* Add this line */
+      }
+
+      /* Style the dropdown arrow */
+      .form-control::after {
+        content: "\25BC"; /* Unicode character for a downward-pointing arrow */
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+
+      /* Add the carat symbol */
+      .form-control::before {
+        content: "\25B2"; /* Unicode character for an upward-pointing arrow */
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        pointer-events: none;
+        color: #333; /* Customize the color if needed */
+      }
+
+      .dropdown-toggle {
+        border: 0;
+        /* Add other styles as needed */
+      }
       html.ie-10 .ie-panel,
       html.lt-ie-10 .ie-panel {
         display: block;
@@ -89,6 +126,10 @@
           rgba(69, 32, 38, 1) 75%,
           rgba(39, 34, 36, 1) 100%
         ) !important;
+      }
+      .custom-container {
+        background-color: red;
+        color: white;
       }
       .rd-navbar-fixed .rd-navbar-panel {
         background: rgb(250, 128, 36) !important;
@@ -126,6 +167,12 @@
           rgba(39, 34, 36, 1) 100%
         );
       }
+      .alert {
+        background-color: pink;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        border-left: 2px solid red;
+      }
     </style>
   </head>
 
@@ -148,10 +195,40 @@
     </div>
     <div class="page">
       <div id="home">
-        <!-- Page Header-->
         <header class="section page-header">
-          <!-- RD Navbar-->
-          <div class="rd-navbar-wrap">
+          <nav
+            class="rd-navbar rd-navbar-classic gradCol"
+            data-layout="rd-navbar-fixed"
+            data-sm-layout="rd-navbar-fixed"
+            data-md-layout="rd-navbar-fixed"
+            data-md-device-layout="rd-navbar-fixed"
+            data-lg-layout="rd-navbar-fixed"
+            data-lg-device-layout="rd-navbar-fixed"
+            data-xl-layout="rd-navbar-static"
+            data-xl-device-layout="rd-navbar-static"
+            data-xxl-layout="rd-navbar-static"
+            data-xxl-device-layout="rd-navbar-static"
+            data-lg-stick-up-offset="46px"
+            data-xl-stick-up-offset="46px"
+            data-xxl-stick-up-offset="46px"
+            data-lg-stick-up="true"
+            data-xl-stick-up="true"
+            data-xxl-stick-up="true"
+          >
+            <div class="rd-navbar-panel justify-content-center">
+              <div class="container-fluid gradCol">
+                <div class="navbar-header">
+                  <div class="rd-navbar-brand">
+                    <a class="brand" href="index.html">
+                      <img src="images/NEXUs.png" alt="" class="logo-nexus" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          <!-- <div class="rd-navbar-wrap">
             <nav
               class="rd-navbar rd-navbar-classic gradCol"
               data-layout="rd-navbar-fixed"
@@ -173,80 +250,20 @@
             >
               <div class="rd-navbar-main-outer gradCol justify-content-center">
                 <div class="">
-                  <!-- RD Navbar Panel-->
+                 
                   <div class="rd-navbar-panel justify-content-center">
-                    <!-- RD Navbar Toggle-->
-
-                    <!-- RD Navbar Brand-->
+                    
                     <div class="rd-navbar-brand">
                       <a class="brand" href="index.html"
                         ><img src="images/NEXUs.png" alt="" class="logo-nexus"
                       /></a>
                     </div>
                   </div>
-                  <!-- <div class="rd-navbar-main-element">
-                    <div class="rd-navbar-nav-wrap">
-                    
-                      <div
-                        class="rd-navbar-share fl-bigmug-line-share27"
-                        data-rd-navbar-toggle=".rd-navbar-share-list"
-                      >
-                        <ul class="list-inline rd-navbar-share-list">
-                          <li class="rd-navbar-share-list-item">
-                            <a class="icon fa fa-facebook" href="#"></a>
-                          </li>
-                          <li class="rd-navbar-share-list-item">
-                            <a class="icon fa fa-twitter" href="#"></a>
-                          </li>
-                          <li class="rd-navbar-share-list-item">
-                            <a class="icon fa fa-google-plus" href="#"></a>
-                          </li>
-                          <li class="rd-navbar-share-list-item">
-                            <a class="icon fa fa-instagram" href="#"></a>
-                          </li>
-                        </ul>
-                      </div>
-                      <ul class="rd-navbar-nav">
-                        <li class="rd-nav-item active">
-                          <a
-                            class="rd-nav-link"
-                            href="#home"
-                            style="color: white"
-                            >Home</a
-                          >
-                        </li>
-                        <li class="rd-nav-item">
-                          <a
-                            class="rd-nav-link"
-                            href="#products"
-                            style="color: white"
-                            >Products</a
-                          >
-                        </li>
-
-                        <li class="rd-nav-item">
-                          <a
-                            class="rd-nav-link"
-                            href="#news"
-                            style="color: white"
-                            >Contact</a
-                          >
-                        </li>
-                        <li class="rd-nav-item">
-                          <a
-                            class="rd-nav-link"
-                            href="#contacts"
-                            style="color: white"
-                            >Register</a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                  </div> -->
+                  
                 </div>
               </div>
             </nav>
-          </div>
+          </div> -->
         </header>
 
         <!-- Swiper-->
@@ -723,6 +740,27 @@
           style="width: 80%; height: 400px; margin: auto; margin-bottom: 2rem"
         ></div>
       </section>
+      <!-- <button onclick="func()">Hi</button> -->
+      <!-- <form
+        id="myForm"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSecJEfTIn2ljlxRZUcLzJuwK0e06K8ZGEeChvoQVkyjKWmxTA/formResponse"
+        method="POST"
+        target="hidden_iframe"
+        onsubmit="submitted=true;"
+      >
+       
+        <label for="name">Name:</label>
+        <input type="text" name="entry.1330855951" id="name" required /><br />
+
+        <label for="dropdown">Select an Option:</label>
+        <select name="entry.1168842521" id="dropdown" required>
+          <option value="">Please select</option>
+          <option value="professional">professional</option>
+          <option value="student">student</option></select
+        ><br />
+
+        <button type="submit">Submit</button>
+      </form> -->
 
       <!-- Contact Form-->
       <section
@@ -732,7 +770,7 @@
         <div class="container">
           <article class="title-classic">
             <div class="title-classic-title">
-              <h3>Get in touch</h3>
+              <h3>Register Now</h3>
             </div>
             <div class="title-classic-text">
               <p>
@@ -741,13 +779,7 @@
               </p>
             </div>
           </article>
-          <form
-            class="rd-form rd-form-variant-2 rd-mailform"
-            data-form-output="form-output-global"
-            data-form-type="contact"
-            method="post"
-            action="bat/rd-mailform.php"
-          >
+          <form class="rd-form rd-form-variant-2 rd-mailform" id="myForm">
             <div class="row row-14 gutters-14">
               <div class="col-md-4">
                 <div class="form-wrap">
@@ -755,7 +787,7 @@
                     class="form-input"
                     id="contact-your-name-2"
                     type="text"
-                    name="name"
+                    name="entry.1024248838"
                     data-constraints="@Required"
                   />
                   <label class="form-label" for="contact-your-name-2"
@@ -769,7 +801,7 @@
                     class="form-input"
                     id="contact-email-2"
                     type="email"
-                    name="email"
+                    name="entry.1505075882"
                     data-constraints="@Email @Required"
                   />
                   <label class="form-label" for="contact-email-2">E-mail</label>
@@ -781,71 +813,52 @@
                     class="form-input"
                     id="contact-phone-2"
                     type="text"
-                    name="phone"
+                    name="entry.1091802609"
                     data-constraints="@Numeric"
                   />
                   <label class="form-label" for="contact-phone-2">Phone</label>
                 </div>
               </div>
 
-              <div class="dropdown-center col-md-4">
-                <button
-                  class="btn btn-secondary dropdown-toggle form-input text-left"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Gender
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Male</a></li>
-                  <li><a class="dropdown-item" href="#">Female</a></li>
-                </ul>
+              <div class="col-md-4">
+                <div class="form-wrap">
+                  <input
+                    class="form-input"
+                    type="text"
+                    name="entry.631106756"
+                    data-constraints="@Numeric"
+                  />
+                  <label class="form-label">Age</label>
+                </div>
               </div>
 
-              <div class="dropdown-center col-md-4">
-                <button
-                  class="btn btn-secondary dropdown-toggle form-input text-left"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+              <div class="form-group dropdown-center col-md-4">
+                <select
+                  class="form-control btn btn-secondary dropdown-toggle form-input text-left"
+                  name="entry.1288768881"
+                  required
                 >
-                  College
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">UEM</a></li>
-                  <li><a class="dropdown-item" href="#">IEM</a></li>
-                </ul>
+                  <option value="" selected disabled>City</option>
+
+                  <option value="Delhi">Delhi</option>
+                  <option value="Kolkata">Kolkata</option>
+                  <option value="Mumbai">Mumbai</option>
+                  <option value="Bengaluru">Delhi</option>
+                </select>
               </div>
 
-              <div class="dropdown-center col-md-4">
-                <button
-                  class="btn btn-secondary dropdown-toggle form-input text-left"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+              <div class="form-group dropdown-center col-md-4">
+                <select
+                  class="form-control btn btn-secondary dropdown-toggle form-input text-left"
+                  id="genderSelect"
+                  name="entry.1981334274"
                 >
-                  Student
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">student</a></li>
-                  <li><a class="dropdown-item" href="#">professional</a></li>
-                </ul>
-              </div>
+                  <option value="" selected disabled>Occupation</option>
 
-              <div class="dropdown-center col-md-4">
-                <button
-                  class="btn btn-secondary dropdown-toggle form-input text-left"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Pincode
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">700056</a></li>
-                  <li><a class="dropdown-item" href="#">700032</a></li>
-                </ul>
+                  <option value="Professional">Professional</option>
+                  <option value="Student">Student</option>
+                  <option value="Businessmen">Businessmen</option>
+                </select>
               </div>
             </div>
             <button
@@ -853,11 +866,18 @@
               style="align-self: center !important"
               type="submit"
             >
-              Send Message
+              Submit
             </button>
           </form>
         </div>
       </section>
+
+      <iframe
+        name="hidden_iframe"
+        id="hidden_iframe"
+        style="display: none"
+        onload="if(submitted) { showResponse(); }"
+      ></iframe>
 
       <!-- Page Footer-->
       <footer class="section section-fluid footer-minimal context-dark">
@@ -1047,11 +1067,69 @@
         </div>
       </div>
     </div>
+
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#myForm").on("submit", function (event) {
+          event.preventDefault(); // Prevent the form from submitting the default way
+          $.ajax({
+            url: "https://docs.google.com/forms/d/e/1FAIpQLSebiEX9uhNZyEPNcENB1ArbPhWAUtJ72-AKm63h2t4Yb6kUTw/formResponse",
+            type: "POST",
+            data: $("#myForm").serialize(),
+            success: function () {
+              $("#responseMessage").show();
+              $("#myForm")[0].reset(); // Reset the form fields
+            },
+            error: function (e) {
+              console.warn(e);
+              document.getElementById("myForm").reset();
+              Swal.fire({
+                title: "Registered!",
+                text: "We'll reach out to you soon",
+                icon: "success",
+              });
+            },
+          });
+        });
+      });
+    </script>
+
+    <script>
+      let submitted = false;
+      function showResponse() {
+        // document.getElementById("responseMessage").style.display = "block";
+        // document.getElementById("myForm").reset();
+        submitted = false;
+        Swal.fire({
+          title: "Registered!",
+          text: "We'll reach out to you soon",
+          icon: "success",
+        });
+      }
+
+      function func() {
+        Swal.fire({
+          title: "Registered!",
+          text: "We'll reach out to you soon",
+          icon: "success",
+        });
+      }
+
+      function func2() {
+        Swal.fire({
+          title: "",
+          text: "Please fillup all the mandatory fields",
+          icon: "error",
+        });
+      }
+    </script>
 
     <script>
       function myMap() {
@@ -1067,7 +1145,12 @@
     </script>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOVYRIgupAurZup5y1PRh8Ismb1A3lLao&libraries=places&callback=myMap"></script>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"
+      integrity="sha512-lOrm9FgT1LKOJRUXF3tp6QaMorJftUjowOWiDcG5GFZ/q7ukof19V0HKx/GWzXCdt9zYju3/KhBNdCLzK8b90Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- coded by Himic-->
   </body>
 </html>
