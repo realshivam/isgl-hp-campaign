@@ -16,6 +16,7 @@
       type="text/css"
       href="//fonts.googleapis.com/css?family=Poppins:400,500,600%7CTeko:300,400,500%7CMaven+Pro:500"
     />
+
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/fonts.css" />
 
@@ -128,6 +129,7 @@
           rgba(39, 34, 36, 1) 100%
         ) !important;
       }
+
       .custom-container {
         background-color: red;
         color: white;
@@ -179,7 +181,20 @@
         align-self: center;
         margin-left: auto;
         margin-right: auto;
-        height: 30vh;
+        /* height: 30vh; */
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency here */
+        pointer-events: none; /* Allows clicks to pass through */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white; /* Text color inside overlay */
       }
     </style>
   </head>
@@ -709,7 +724,7 @@
                 </div>
               </article>
             </div>
-            <div class="col-sm-8 col-md-6 col-lg-4">
+            <!-- <div class="col-sm-8 col-md-6 col-lg-4">
               <article class="box-contacts">
                 <div class="box-contacts-body">
                   <div class="box-contacts-icon fl-bigmug-line-up104"></div>
@@ -721,7 +736,7 @@
                   </p>
                 </div>
               </article>
-            </div>
+            </div> -->
             <div class="col-sm-8 col-md-6 col-lg-4">
               <article class="box-contacts">
                 <div class="box-contacts-body">
@@ -753,10 +768,11 @@
           ></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div
+            <!-- <div
               id="googleMap2"
               style="
                 width: 100%;
@@ -764,15 +780,39 @@
                 margin: auto;
                 margin-bottom: 2rem;
               "
-            ></div>
-            <!-- <img
-              class="d-block w-100"
-              src="images/delhi-location.png"
-              alt="First slide"
-            /> -->
+            ></div> -->
+            <a
+              href="https://g.co/kgs/DFyPWT9 
+            "
+              target="_blank"
+            >
+              <img
+                class="d-block w-100"
+                src="images/delhi-location2.png"
+                alt="First slide"
+              />
+            </a>
+            <div class="overlay">
+              <div class="carousel-caption">
+                <p style="flex-direction: column">
+                  <span
+                    ><a
+                      class="icon fa fa-map-marker"
+                      style="color: white !important; margin-right: 5px"
+                      href="#"
+                    ></a
+                    >Delhi</span
+                  ><br />
+                  <small style="font-size: 10px"
+                    >G-4 Ground Floor, 55, Madhuban building, Nehru Place, New
+                    Delhi, Delhi 110019</small
+                  >
+                </p>
+              </div>
+            </div>
           </div>
           <div class="carousel-item">
-            <div
+            <!-- <div
               id="googleMap3"
               style="
                 width: 100%;
@@ -780,15 +820,41 @@
                 margin: auto;
                 margin-bottom: 2rem;
               "
-            ></div>
-            <!-- <img
-              class="d-block w-100"
-              src="images/slider-1-slide-2-1770x742.jpg"
-              alt="Second slide"
-            /> -->
+            ></div> -->
+            <a
+              href="https://g.co/kgs/h7Zwsd1
+ 
+            "
+              target="_blank"
+            >
+              <img
+                class="d-block w-100"
+                src="images/mumbai2.png"
+                alt="Second slide"
+              />
+            </a>
+            <div class="overlay">
+              <div class="carousel-caption">
+                <p style="flex-direction: column">
+                  <span
+                    ><a
+                      class="icon fa fa-map-marker"
+                      style="color: white !important; margin-right: 5px"
+                      href="#"
+                    ></a
+                    >Mumbai</span
+                  ><br />
+                  <small style="font-size: 10px"
+                    >3/4, Ground, Dhun Building, Police Station, Grant Road
+                    East, Shapur Baug, Grant Road, Mumbai, Maharashtra
+                    400007</small
+                  >
+                </p>
+              </div>
+            </div>
           </div>
           <div class="carousel-item">
-            <div
+            <!-- <div
               id="googleMap1"
               style="
                 width: 100%;
@@ -796,12 +862,77 @@
                 margin: auto;
                 margin-bottom: 2rem;
               "
-            ></div>
-            <!-- <img
-              class="d-block w-100"
-              src="images/slider-1-slide-2-1770x742.jpg"
-              alt="Third slide"
-            /> -->
+            ></div> -->
+            <a
+              href="https://maps.app.goo.gl/GV1Ge3VA4aWZkHHT7 
+            "
+              target="_blank"
+            >
+              <img
+                class="d-block w-100"
+                src="images/kolkata.png"
+                alt="Third slide"
+              />
+            </a>
+            <div class="overlay">
+              <div class="carousel-caption">
+                <p style="flex-direction: column">
+                  <span
+                    ><a
+                      class="icon fa fa-map-marker"
+                      style="color: white !important; margin-right: 5px"
+                      href="#"
+                    ></a
+                    >Kolkata</span
+                  ><br />
+                  <small style="font-size: 10px">
+                    1st floor, SHOP NO 115, near 6, Chittaranjan Ave, Kolkata,
+                    West Bengal 700072</small
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <!-- <div
+              id="googleMap1"
+              style="
+                width: 100%;
+                height: 200px;
+                margin: auto;
+                margin-bottom: 2rem;
+              "
+            ></div> -->
+            <a
+              href="https://g.co/kgs/5vMnXK1
+ 
+            "
+              target="_blank"
+            >
+              <img
+                class="d-block w-100"
+                src="images/bangalore.png"
+                alt="Fourth slide"
+              />
+            </a>
+            <div class="overlay">
+              <div class="carousel-caption">
+                <p style="flex-direction: column">
+                  <span
+                    ><a
+                      class="icon fa fa-map-marker"
+                      style="color: white !important; margin-right: 5px"
+                      href="#"
+                    ></a
+                    >Bengaluru</span
+                  ><br />
+                  <small style="font-size: 10px">
+                    10, OTC Road, Sadar Patrappa Rd, Bengaluru, Karnataka
+                    560002</small
+                  >
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         <a
@@ -823,137 +954,6 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-
-      <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div id="googleMap1" style="
-              width: 80%;
-              height: 400px;
-              margin: auto;
-              margin-bottom: 2rem;
-            "></div>
-            
-        
-          </div>
-          <div class="carousel-item">
-            <div id="googleMap2" style="
-              width: 80%;
-              height: 400px;
-              margin: auto;
-              margin-bottom: 2rem;
-            "></div>
-
-    
-          </div>
-          <div class="carousel-item">
-            <div id="googleMap3" style="
-              width: 80%;
-              height: 400px;
-              margin: auto;
-              margin-bottom: 2rem;
-            "></div>
-          
-          </div>
-        </div>
-       <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </button>
-      </div>
-
-      <div id="demo" class="carousel slide" data-ride="carousel">
-      
-      <ul class="carousel-indicators">
-        <li data-target="#demo" data-slide-to="0" class="active"></li>
-        <li data-target="#demo" data-slide-to="1"></li>
-        <li data-target="#demo" data-slide-to="2"></li>
-      </ul>
-  
-
-    <section class="section section-fluid">
-       
-        <div class="owl-carousel owl-theme">
-          <div class="item">
-            <div
-              id="googleMap1"
-              style="
-                width: 80%;
-                height: 400px;
-                margin: auto;
-                margin-bottom: 2rem;
-              "
-            ></div>
-          </div>
-          <div class="item">
-            <div
-              id="googleMap2"
-              style="
-                width: 80%;
-                height: 400px;
-                margin: auto;
-                margin-bottom: 2rem;
-              "
-            ></div>
-          </div>
-          <div class="item">
-            <div
-              id="googleMap3"
-              style="
-                width: 80%;
-                height: 400px;
-                margin: auto;
-                margin-bottom: 2rem;
-              "
-            ></div>
-          </div>
-          <div class="item">
-            <div
-              id="googleMap4"
-              style="
-                width: 80%;
-                height: 400px;
-                margin: auto;
-                margin-bottom: 2rem;
-              "
-            ></div>
-          </div>
-        </div>
-      </section> -->
-
-      <!-- RD Google Map-->
-      <!-- <section class="section section-fluid">
-       
-        <div
-          id="googleMap"
-          style="width: 80%; height: 400px; margin: auto; margin-bottom: 2rem"
-        ></div>
-      </section> -->
-      <!-- <button onclick="func()">Hi</button> -->
-      <!-- <form
-        id="myForm"
-        action="https://docs.google.com/forms/d/e/1FAIpQLSecJEfTIn2ljlxRZUcLzJuwK0e06K8ZGEeChvoQVkyjKWmxTA/formResponse"
-        method="POST"
-        target="hidden_iframe"
-        onsubmit="submitted=true;"
-      >
-       
-        <label for="name">Name:</label>
-        <input type="text" name="entry.1330855951" id="name" required /><br />
-
-        <label for="dropdown">Select an Option:</label>
-        <select name="entry.1168842521" id="dropdown" required>
-          <option value="">Please select</option>
-          <option value="professional">professional</option>
-          <option value="student">student</option></select
-        ><br />
-
-        <button type="submit">Submit</button>
-      </form> -->
 
       <!-- Contact Form-->
       <section
