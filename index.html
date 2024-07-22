@@ -24,19 +24,74 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <style>
+      .banner {
+        /* background: linear-gradient(
+          to right,
+          #272224 0%,
+          #452026 33%,
+          #fe1c22 75%,
+          #fa8024 100%
+        ); */
+        background-color: #2d2d2d;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      .logo {
+        max-height: 100px;
+        position: absolute;
+      }
+
+      .logo2 {
+        max-height: 100px;
+      }
+
       @media (min-width: 768px) {
+        /* pc */
         .logo-nexus {
           height: 85px !important;
           width: 95px !important;
         }
+        .banner {
+          position: relative;
+          height: 25vh;
+        }
+
+        .phoneLogo {
+          background-color: transparent;
+          position: absolute;
+          /* left: 47%; */
+          /* right: 40%; */
+          top: 46%;
+          width: 100%;
+          z-index: 1000000;
+        }
       }
 
       @media (max-width: 767.98px) {
+        /* phone */
         .logo-nexus {
           height: 51px !important;
           width: 56px !important;
         }
+        .banner {
+          position: relative;
+          height: 12vh;
+        }
+        .phoneLogo {
+          background-color: transparent;
+          position: absolute;
+          /* left: 37%; */
+          width: 100%;
+          top: 43%;
+          z-index: 1000000;
+        }
+        .rd-navbar-fixed .rd-navbar-panel {
+          height: 12vh;
+        }
       }
+
       .ie-panel {
         display: none;
         background: #212121;
@@ -47,6 +102,7 @@
         position: relative;
         z-index: 1;
       }
+
       html {
         scroll-behavior: smooth;
       }
@@ -63,6 +119,7 @@
           rgba(39, 34, 36, 1) 100%
         );
       }
+
       .button-primary.button-pipaluk::before {
         background: rgb(250, 128, 36);
         color: white;
@@ -75,6 +132,7 @@
           rgba(39, 34, 36, 1) 100%
         );
       }
+
       /* Style the select element */
       .form-control {
         width: 100%;
@@ -82,12 +140,14 @@
         border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
-        position: relative; /* Add this line */
+        position: relative;
+        /* Add this line */
       }
 
       /* Style the dropdown arrow */
       .form-control::after {
-        content: "\25BC"; /* Unicode character for a downward-pointing arrow */
+        content: "\25BC";
+        /* Unicode character for a downward-pointing arrow */
         position: absolute;
         top: 50%;
         right: 10px;
@@ -97,29 +157,35 @@
 
       /* Add the carat symbol */
       .form-control::before {
-        content: "\25B2"; /* Unicode character for an upward-pointing arrow */
+        content: "\25B2";
+        /* Unicode character for an upward-pointing arrow */
         position: absolute;
         top: 50%;
         right: 10px;
         transform: translateY(-50%);
         pointer-events: none;
-        color: #333; /* Customize the color if needed */
+        color: #333;
+        /* Customize the color if needed */
       }
 
       .dropdown-toggle {
         border: 0;
         /* Add other styles as needed */
       }
+
       html.ie-10 .ie-panel,
       html.lt-ie-10 .ie-panel {
         display: block;
       }
+
       .rd-navbar-classic.rd-navbar-static .rd-nav-link::before {
         background: white;
       }
+
       .rd-navbar-classic.rd-navbar-static .rd-navbar-main {
         justify-content: center !important;
       }
+
       .box-contacts-icon {
         color: linear-gradient(
           283deg,
@@ -134,18 +200,12 @@
         background-color: red;
         color: white;
       }
-      .rd-navbar-fixed .rd-navbar-panel {
-        background: rgb(250, 128, 36) !important;
-        color: white;
 
-        background: linear-gradient(
-          283deg,
-          rgba(250, 128, 36, 1) 0%,
-          rgba(254, 28, 34, 1) 33%,
-          rgba(69, 32, 38, 1) 75%,
-          rgba(39, 34, 36, 1) 100%
-        ) !important;
+      .rd-navbar-fixed .rd-navbar-panel {
+        background: #2d2d2d !important;
+        color: white;
       }
+
       .gradCol {
         background: rgb(250, 128, 36);
         color: white;
@@ -158,6 +218,16 @@
           rgba(39, 34, 36, 1) 100%
         );
       }
+
+      .gradCol2 {
+        background: rgb(255, 2, 2);
+        background: linear-gradient(
+          324deg,
+          rgba(255, 2, 2, 1) 62%,
+          rgba(255, 50, 178, 1) 82%
+        );
+      }
+
       .ui-to-top {
         background: rgb(250, 128, 36);
         color: white;
@@ -170,12 +240,14 @@
           rgba(39, 34, 36, 1) 100%
         );
       }
+
       .alert {
         background-color: pink;
         margin-left: 2rem;
         margin-right: 2rem;
         border-left: 2px solid red;
       }
+
       #carouselExampleIndicators {
         width: 85%;
         align-self: center;
@@ -183,18 +255,22 @@
         margin-right: auto;
         /* height: 30vh; */
       }
+
       .overlay {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency here */
-        pointer-events: none; /* Allows clicks to pass through */
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Adjust transparency here */
+        pointer-events: none;
+        /* Allows clicks to pass through */
         display: flex;
         justify-content: center;
         align-items: center;
-        color: white; /* Text color inside overlay */
+        color: white;
+        /* Text color inside overlay */
       }
     </style>
   </head>
@@ -219,7 +295,34 @@
     <div class="page">
       <div id="home">
         <header class="section page-header">
-          <nav
+          <!-- <div class="container-fluid banner">
+            <div
+              class="row"
+              style="position: relative; justify-content: space-between"
+            >
+              <div style="background-color: transparent">
+                <img
+                  src="images/lg2.png"
+                  alt=""
+                  width="100"
+                  style="margin-left: 2rem"
+                />
+              </div>
+
+              <div style="background-color: transparent">
+                <img
+                  src="images/lg1.png"
+                  alt=""
+                  width="100"
+                  style="margin-right: 2rem"
+                />
+              </div>
+            </div>
+            <div class="phoneLogo">
+              <img src="images/Omen-Spark.png" alt="" width="100" />
+            </div>
+          </div> -->
+          <!-- <nav
             class="rd-navbar rd-navbar-classic gradCol"
             data-layout="rd-navbar-fixed"
             data-sm-layout="rd-navbar-fixed"
@@ -258,11 +361,12 @@
                 </div>
               </div>
             </div>
-          </nav>
+          </nav> -->
 
-          <!-- <div class="rd-navbar-wrap">
+          <div class="rd-navbar-wrap">
             <nav
-              class="rd-navbar rd-navbar-classic gradCol"
+              class="rd-navbar rd-navbar-classic"
+              style="background-color: #2d2d2d !important"
               data-layout="rd-navbar-fixed"
               data-sm-layout="rd-navbar-fixed"
               data-md-layout="rd-navbar-fixed"
@@ -280,26 +384,54 @@
               data-xl-stick-up="true"
               data-xxl-stick-up="true"
             >
-              <div class="rd-navbar-main-outer gradCol justify-content-center">
+              <div
+                class="rd-navbar-main-outer justify-content-center"
+                style="background-color: #2d2d2d !important"
+              >
                 <div class="">
-                 
-                  <div class="rd-navbar-panel justify-content-center">
-                    
-                    <div class="rd-navbar-brand">
-                      <a class="brand" href="index.html"
-                        ><img src="images/NEXUs.png" alt="" class="logo-nexus"
-                      /></a>
+                  <div
+                    class="rd-navbar-panel justify-content-center"
+                    style="background-color: #2d2d2d !important"
+                  >
+                    <div class="container-fluid banner">
+                      <div
+                        class="row"
+                        style="
+                          position: relative;
+                          justify-content: space-between;
+                        "
+                      >
+                        <div style="background-color: transparent">
+                          <img
+                            src="images/lg2.png"
+                            alt=""
+                            width="100"
+                            style="margin-left: 2rem"
+                          />
+                        </div>
+
+                        <div style="background-color: transparent">
+                          <img
+                            src="images/lg1.png"
+                            alt=""
+                            width="100"
+                            style="margin-right: 2rem"
+                          />
+                        </div>
+                      </div>
+                      <div class="phoneLogo">
+                        <img src="images/Omen-Spark.png" alt="" width="100" />
+                      </div>
                     </div>
                   </div>
-                  
                 </div>
               </div>
             </nav>
-          </div> -->
+          </div>
         </header>
 
         <!-- Swiper-->
-        <section
+        <!-- <section
           class="section swiper-container swiper-slider swiper-slider-classic"
           data-loop="true"
           data-autoplay="4859"
@@ -403,7 +535,7 @@
               </div>
             </div>
           </div>
-          <!-- Swiper Pagination-->
+          
           <div class="swiper-pagination__module">
             <div class="swiper-pagination__fraction">
               <span class="swiper-pagination__fraction-index">00</span
@@ -413,7 +545,7 @@
             <div class="swiper-pagination__divider"></div>
             <div class="swiper-pagination"></div>
           </div>
-        </section>
+        </section> -->
       </div>
       <!-- See all services-->
 
@@ -544,7 +676,7 @@
         id="products"
         class="section section-sm section-fluid bg-default"
       >
-        <div class="container-fluid">
+        <div class="container-fluid" style="margin-top: 4rem">
           <h2>Products</h2>
           <div class="row row-sm row-30 justify-content-center">
             <div id="card1" class="col-md-6 col-lg-5 col-xl-3 wow fadeInRight">
@@ -552,14 +684,16 @@
               <article class="team-classic team-classic-lg">
                 <a class="team-classic-figure" href="#"
                   ><img
-                    src="images/team-11-420x424.jpg"
+                    src="images/prods/prod1-removebg-preview.jpg"
                     alt=""
                     width="420"
                     height="424"
                 /></a>
-                <div class="team-classic-caption">
-                  <h4 class="team-classic-name"><a href="#">Hp pavalion</a></h4>
-                  <p class="team-classic-status">Best in market</p>
+                <div class="team-classic-caption gradCol2">
+                  <h4 class="team-classic-name">
+                    <a href="#">Omen 16</a>
+                  </h4>
+                  <p class="team-classic-status">Intel</p>
                 </div>
               </article>
             </div>
@@ -572,16 +706,16 @@
               <article class="team-classic team-classic-lg">
                 <a class="team-classic-figure" href="#"
                   ><img
-                    src="images/team-12-420x424.jpg"
+                    src="images/prods/prod2.jpg"
                     alt=""
                     width="420"
                     height="424"
                 /></a>
-                <div class="team-classic-caption">
+                <div class="team-classic-caption gradCol2">
                   <h4 class="team-classic-name">
-                    <a href="#">Hp keyboards</a>
+                    <a href="#">Victus 16</a>
                   </h4>
-                  <p class="team-classic-status">Best in market</p>
+                  <p class="team-classic-status">Intel</p>
                 </div>
               </article>
             </div>
@@ -594,16 +728,16 @@
               <article class="team-classic team-classic-lg">
                 <a class="team-classic-figure" href="#"
                   ><img
-                    src="images/team-13-420x424.jpg"
+                    src="images/prods/prod3.jpg"
                     alt=""
                     width="420"
                     height="424"
                 /></a>
-                <div class="team-classic-caption">
+                <div class="team-classic-caption gradCol2">
                   <h4 class="team-classic-name">
-                    <a href="#">Laptops</a>
+                    <a href="#">24c1 Brunobear</a>
                   </h4>
-                  <p class="team-classic-status">Best in market</p>
+                  <p class="team-classic-status">Intel</p>
                 </div>
               </article>
             </div>
@@ -616,96 +750,14 @@
               <article class="team-classic team-classic-lg">
                 <a class="team-classic-figure" href="#"
                   ><img
-                    src="images/team-14-420x424.jpg"
+                    src="images/prods/prod2.jpg"
                     alt=""
                     width="420"
                     height="424"
                 /></a>
-                <div class="team-classic-caption">
-                  <h4 class="team-classic-name"><a href="#">Hp laptop</a></h4>
-                  <p class="team-classic-status">Best in market</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="row row-sm row-30 justify-content-center">
-            <div id="card1" class="col-md-6 col-lg-5 col-xl-3 wow fadeInRight">
-              <!-- Team Classic-->
-              <article class="team-classic team-classic-lg">
-                <a class="team-classic-figure" href="#"
-                  ><img
-                    src="images/team-11-420x424.jpg"
-                    alt=""
-                    width="420"
-                    height="424"
-                /></a>
-                <div class="team-classic-caption">
-                  <h4 class="team-classic-name"><a href="#">Hp laptop</a></h4>
-                  <p class="team-classic-status">Best in market</p>
-                </div>
-              </article>
-            </div>
-            <div
-              id="card2"
-              class="col-md-6 col-lg-5 col-xl-3 wow fadeInRight"
-              data-wow-delay=".1s"
-            >
-              <!-- Team Classic-->
-              <article class="team-classic team-classic-lg">
-                <a class="team-classic-figure" href="#"
-                  ><img
-                    src="images/team-12-420x424.jpg"
-                    alt=""
-                    width="420"
-                    height="424"
-                /></a>
-                <div class="team-classic-caption">
-                  <h4 class="team-classic-name">
-                    <a href="#">Hp laptop</a>
-                  </h4>
-                  <p class="team-classic-status">Best in market</p>
-                </div>
-              </article>
-            </div>
-            <div
-              id="card3"
-              class="col-md-6 col-lg-5 col-xl-3 wow fadeInRight"
-              data-wow-delay=".2s"
-            >
-              <!-- Team Classic-->
-              <article class="team-classic team-classic-lg">
-                <a class="team-classic-figure" href="#"
-                  ><img
-                    src="images/team-13-420x424.jpg"
-                    alt=""
-                    width="420"
-                    height="424"
-                /></a>
-                <div class="team-classic-caption">
-                  <h4 class="team-classic-name">
-                    <a href="#">Hp laptop</a>
-                  </h4>
-                  <p class="team-classic-status">Best in market</p>
-                </div>
-              </article>
-            </div>
-            <div
-              id="card4"
-              class="col-md-6 col-lg-5 col-xl-3 wow fadeInRight"
-              data-wow-delay=".3s"
-            >
-              <!-- Team Classic-->
-              <article class="team-classic team-classic-lg">
-                <a class="team-classic-figure" href="#"
-                  ><img
-                    src="images/team-14-420x424.jpg"
-                    alt=""
-                    width="420"
-                    height="424"
-                /></a>
-                <div class="team-classic-caption">
-                  <h4 class="team-classic-name"><a href="#">Hp laptop</a></h4>
-                  <p class="team-classic-status">Best in market</p>
+                <div class="team-classic-caption gradCol2">
+                  <h4 class="team-classic-name"><a href="#">Victus 16</a></h4>
+                  <p class="team-classic-status">Intel</p>
                 </div>
               </article>
             </div>
