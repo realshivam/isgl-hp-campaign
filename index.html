@@ -1075,6 +1075,7 @@
                   class="form-control btn btn-secondary dropdown-toggle form-input text-left"
                   style="padding-left: 1.5rem"
                   name="entry.1288768881"
+                  id="citySelect"
                   required
                 >
                   <option value="" selected disabled>
@@ -1092,7 +1093,7 @@
                 <select
                   class="form-control btn btn-secondary dropdown-toggle form-input text-left"
                   style="padding-left: 1.5rem"
-                  id="genderSelect"
+                  id="occSelect"
                   name="entry.1981334274"
                   required
                 >
@@ -1329,24 +1330,76 @@
       $(document).ready(function () {
         $("#myForm").on("submit", function (event) {
           event.preventDefault(); // Prevent the form from submitting the default way
-          $.ajax({
-            url: "https://docs.google.com/forms/d/e/1FAIpQLSebiEX9uhNZyEPNcENB1ArbPhWAUtJ72-AKm63h2t4Yb6kUTw/formResponse",
-            type: "POST",
-            data: $("#myForm").serialize(),
-            success: function () {
-              $("#responseMessage").show();
-              $("#myForm")[0].reset(); // Reset the form fields
-            },
-            error: function (e) {
-              console.warn(e);
-              document.getElementById("myForm").reset();
-              Swal.fire({
-                title: "Registered!",
-                text: "We'll reach out to you soon",
-                icon: "success",
-              });
-            },
-          });
+
+          var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          var namePattern = /^[a-zA-Z ]$/;
+          var phonePattern = /^\d{10}$/;
+          var agePattern = /^(?:1[01][0-9]|[1-9][0-9]?|120)$/;
+
+          // Email validation
+          var email = $("#contact-email-2").val();
+          var name = $("#contact-your-name-2").val();
+          var phone = $("#contact-phone-2").val();
+          var age = $("#contact-age-2").val();
+          var city = $("#citySelect").val();
+          var occ = $("#occSelect").val();
+
+          if (!name) {
+            Swal.fire({
+              title: "",
+              text: "Please enter name",
+              icon: "error",
+            });
+          } else if (!emailPattern.test(email)) {
+            Swal.fire({
+              title: "",
+              text: "Please enter valid email id",
+              icon: "error",
+            });
+          } else if (!phonePattern.test(phone)) {
+            Swal.fire({
+              title: "",
+              text: "Please enter valid 10 digit whatsapp number",
+              icon: "error",
+            });
+          } else if (!agePattern.test(age)) {
+            Swal.fire({
+              title: "",
+              text: "Please enter valid age (1-120)",
+              icon: "error",
+            });
+          } else if (!city) {
+            Swal.fire({
+              title: "",
+              text: "Please select city",
+              icon: "error",
+            });
+          } else if (!occ) {
+            Swal.fire({
+              title: "",
+              text: "Please select occupation",
+              icon: "error",
+            });
+          } else {
+            $.ajax({
+              url: "https://docs.google.com/forms/d/e/1FAIpQLSebiEX9uhNZyEPNcENB1ArbPhWAUtJ72-AKm63h2t4Yb6kUTw/formResponse",
+              type: "POST",
+              data: $("#myForm").serialize(),
+              success: function () {
+                $("#responseMessage").show();
+                $("#myForm")[0].reset(); // Reset the form fields
+              },
+              error: function (e) {
+                console.warn(e);
+                document.getElementById("myForm").reset();
+                Swal.fire({
+                  title: "Registered!",
+                  text: "We'll reach out to you soon",
+                  icon: "success",
+                });
+              },
+            });
+          }
         });
       });
     </script>
