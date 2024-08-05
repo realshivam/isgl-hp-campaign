@@ -22,281 +22,6 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
-
-    <style>
-      .hvcard {
-        border-radius: 1rem !important;
-        cursor: pointer;
-      }
-
-      .banner {
-        /* background: linear-gradient(
-          to right,
-          #272224 0%,
-          #452026 33%,
-          #fe1c22 75%,
-          #fa8024 100%
-        ); */
-        background-color: #2d2d2d;
-        color: white;
-        padding: 20px 0;
-        text-align: center;
-      }
-
-      .logo {
-        max-height: 100px;
-        position: absolute;
-      }
-
-      .logo2 {
-        max-height: 100px;
-      }
-
-      @media (min-width: 768px) {
-        /* pc */
-        .logo-nexus {
-          height: 85px !important;
-          width: 95px !important;
-        }
-
-        .ui-to-top {
-          padding: 1rem;
-        }
-
-        .banner {
-          position: relative;
-          height: 12vh;
-        }
-
-        .phoneLogo {
-          background-color: transparent;
-          position: absolute;
-          /* left: 47%; */
-          /* right: 40%; */
-          top: 46%;
-          width: 100%;
-          z-index: 1000000;
-        }
-      }
-
-      @media (max-width: 767.98px) {
-        /* phone */
-        .logo-nexus {
-          height: 51px !important;
-          width: 56px !important;
-        }
-        .poster {
-          object-fit: contain;
-          margin-top: 5rem;
-          padding: 0.5rem;
-        }
-        .prods {
-          margin-top: -5rem;
-        }
-
-        .ui-to-top {
-          padding: 0.5rem;
-        }
-
-        .banner {
-          position: relative;
-          height: 12vh;
-        }
-
-        .phoneLogo {
-          background-color: transparent;
-          position: absolute;
-          /* left: 37%; */
-          width: 100%;
-          top: 43%;
-          z-index: 1000000;
-        }
-
-        .rd-navbar-fixed .rd-navbar-panel {
-          height: 12vh;
-        }
-      }
-
-      .ie-panel {
-        display: none;
-        background: #212121;
-        padding: 10px 0;
-        box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3);
-        clear: both;
-        text-align: center;
-        position: relative;
-        z-index: 1;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      .swiper-slider-classic .swiper-pagination-bullet::after {
-        background: rgb(250, 128, 36);
-        color: white;
-
-        background: linear-gradient(
-          283deg,
-          rgba(250, 128, 36, 1) 0%,
-          rgba(254, 28, 34, 1) 33%,
-          rgba(69, 32, 38, 1) 75%,
-          rgba(39, 34, 36, 1) 100%
-        );
-      }
-
-      .button-primary.button-pipaluk::before {
-        color: white;
-        background: linear-gradient(
-          to bottom right,
-          #f54ea2,
-          #ff4e50,
-          #ff4e50,
-          #ffb300
-        );
-      }
-
-      /* Style the select element */
-      .form-control {
-        width: 100%;
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        position: relative;
-        /* Add this line */
-      }
-
-      /* Style the dropdown arrow */
-      .form-control::after {
-        content: "\25BC";
-        /* Unicode character for a downward-pointing arrow */
-        position: absolute;
-        top: 50%;
-        right: 10px;
-        transform: translateY(-50%);
-        pointer-events: none;
-      }
-
-      /* Add the carat symbol */
-      .form-control::before {
-        content: "\25B2";
-        /* Unicode character for an upward-pointing arrow */
-        position: absolute;
-        top: 50%;
-        right: 10px;
-        transform: translateY(-50%);
-        pointer-events: none;
-        color: #333;
-        /* Customize the color if needed */
-      }
-
-      .dropdown-toggle {
-        border: 0;
-        /* Add other styles as needed */
-      }
-
-      html.ie-10 .ie-panel,
-      html.lt-ie-10 .ie-panel {
-        display: block;
-      }
-
-      .rd-navbar-classic.rd-navbar-static .rd-nav-link::before {
-        background: white;
-      }
-
-      .rd-navbar-classic.rd-navbar-static .rd-navbar-main {
-        justify-content: center !important;
-      }
-
-      .box-contacts-icon {
-        color: linear-gradient(
-          283deg,
-          rgba(250, 128, 36, 1) 0%,
-          rgba(254, 28, 34, 1) 33%,
-          rgba(69, 32, 38, 1) 75%,
-          rgba(39, 34, 36, 1) 100%
-        ) !important;
-      }
-
-      .custom-container {
-        background-color: red;
-        color: white;
-      }
-
-      .rd-navbar-fixed .rd-navbar-panel {
-        background: #2d2d2d !important;
-        color: white;
-      }
-
-      .gradCol {
-        background: rgb(250, 128, 36);
-        color: white;
-
-        background: linear-gradient(
-          283deg,
-          rgba(250, 128, 36, 1) 0%,
-          rgba(254, 28, 34, 1) 33%,
-          rgba(69, 32, 38, 1) 75%,
-          rgba(39, 34, 36, 1) 100%
-        );
-      }
-
-      .gradCol2 {
-        background: linear-gradient(
-          to bottom right,
-          #f54ea2,
-          #ff4e50,
-          #ff4e50,
-          #ffb300
-        );
-      }
-
-      .ui-to-top {
-        background: linear-gradient(
-          to bottom right,
-          #f54ea2,
-          #ff4e50,
-          #ff4e50,
-          #ffb300
-        );
-        color: white;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .alert {
-        background-color: pink;
-        margin-left: 2rem;
-        margin-right: 2rem;
-        border-left: 2px solid red;
-      }
-
-      #carouselExampleIndicators {
-        width: 85%;
-        align-self: center;
-        margin-left: auto;
-        margin-right: auto;
-        /* height: 30vh; */
-      }
-
-      .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        /* Adjust transparency here */
-        pointer-events: none;
-        /* Allows clicks to pass through */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        /* Text color inside overlay */
-      }
-    </style>
   </head>
 
   <body>
@@ -318,8 +43,10 @@
     </div>
     <div class="page">
       <div id="home">
+        <!-- header section -->
         <header class="section page-header">
           <div class="rd-navbar-wrap">
+            <!-- navbar section -->
             <nav
               class="rd-navbar rd-navbar-classic"
               style="background-color: #2d2d2d !important"
@@ -394,7 +121,7 @@
           </div>
         </section>
       </div>
-
+      <!-- Products section -->
       <section
         id="products"
         class="section section-sm section-fluid bg-default prods"
@@ -477,7 +204,7 @@
         </div>
       </section>
 
-      <!-- Contact information-->
+      <!-- About Section-->
       <section
         class="section section-sm bg-default mb-2"
         style="margin-top: -6rem"
@@ -500,6 +227,7 @@
           </div>
         </div>
       </section>
+      <!-- Map Section -->
       <section class="section section-sm bg-default">
         <div
           id="carouselExampleIndicators"
@@ -518,15 +246,6 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <!-- <div
-              id="googleMap2"
-              style="
-                width: 100%;
-                height: 200px;
-                margin: auto;
-                margin-bottom: 2rem;
-              "
-            ></div> -->
               <a
                 href="https://g.co/kgs/DFyPWT9 
             "
@@ -559,15 +278,6 @@
               </div>
             </div>
             <div class="carousel-item">
-              <!-- <div
-              id="googleMap3"
-              style="
-                width: 100%;
-                height: 200px;
-                margin: auto;
-                margin-bottom: 2rem;
-              "
-            ></div> -->
               <a
                 href="https://g.co/kgs/oi6PPKZ
  
@@ -600,15 +310,6 @@
               </div>
             </div>
             <div class="carousel-item">
-              <!-- <div
-              id="googleMap1"
-              style="
-                width: 100%;
-                height: 200px;
-                margin: auto;
-                margin-bottom: 2rem;
-              "
-            ></div> -->
               <a
                 href="https://maps.app.goo.gl/GV1Ge3VA4aWZkHHT7 
             "
@@ -640,15 +341,6 @@
               </div>
             </div>
             <div class="carousel-item">
-              <!-- <div
-              id="googleMap1"
-              style="
-                width: 100%;
-                height: 200px;
-                margin: auto;
-                margin-bottom: 2rem;
-              "
-            ></div> -->
               <a
                 href="https://g.co/kgs/5vMnXK1
  
@@ -1063,7 +755,7 @@
           var phonePattern = /^\d{10}$/;
           var agePattern = /^(?:1[01][0-9]|[1-9][0-9]?|120)$/;
 
-          // Email validation
+          //validations
           var email = $("#contact-email-2").val();
           var name = $("#contact-your-name-2").val();
           var phone = $("#contact-phone-2").val();
@@ -1138,81 +830,11 @@
       });
     </script>
 
-    <script>
-      let submitted = false;
-      function showResponse() {
-        // document.getElementById("responseMessage").style.display = "block";
-        // document.getElementById("myForm").reset();
-        submitted = false;
-        Swal.fire({
-          title: "Registered!",
-          text: "We'll reach out to you soon",
-          icon: "success",
-        });
-      }
-
-      function func() {
-        Swal.fire({
-          title: "Registered!",
-          text: "We'll reach out to you soon",
-          icon: "success",
-        });
-      }
-
-      function func2() {
-        Swal.fire({
-          title: "",
-          text: "Please fillup all the mandatory fields",
-          icon: "error",
-        });
-      }
-    </script>
-
-    <script>
-      $(document).ready(function () {
-        $(".owl-carousel").owlCarousel({
-          loop: false,
-          margin: 2,
-          nav: true,
-
-          items: 1,
-        });
-      });
-
-      function initMap() {
-        var mapOptions = {
-          center: new google.maps.LatLng(18.96379515930403, 72.81703728719975), // Default coordinates
-          zoom: 15,
-          disableDefaultUI: true,
-        };
-
-        var map1 = new google.maps.Map(
-          document.getElementById("googleMap1"),
-          mapOptions
-        );
-        var map2 = new google.maps.Map(
-          document.getElementById("googleMap2"),
-          mapOptions
-        );
-        var map3 = new google.maps.Map(
-          document.getElementById("googleMap3"),
-          mapOptions
-        );
-        var map4 = new google.maps.Map(
-          document.getElementById("googleMap4"),
-          mapOptions
-        );
-      }
-
-      // Initialize maps once the window loads
-      window.onload = initMap;
-    </script>
     <script
       src="https://kit.fontawesome.com/f36d81a891.js"
       crossorigin="anonymous"
     ></script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&libraries=places&callback=myMap"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"
       integrity="sha512-lOrm9FgT1LKOJRUXF3tp6QaMorJftUjowOWiDcG5GFZ/q7ukof19V0HKx/GWzXCdt9zYju3/KhBNdCLzK8b90Q=="
