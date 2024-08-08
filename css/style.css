@@ -21180,6 +21180,9 @@ disabled look for disabled choices in the results dropdown
 
 @media (min-width: 768px) {
   /* pc */
+  #mob-swiper {
+    display: none;
+  }
   .logo-nexus {
     height: 85px !important;
     width: 95px !important;
@@ -21207,6 +21210,17 @@ disabled look for disabled choices in the results dropdown
 
 @media (max-width: 767.98px) {
   /* phone */
+  .ml{
+    margin-top: 4rem;
+    height: 100%;
+    width: 100%;
+  }
+  #desk-swiper {
+    display: none;
+  }
+  #mob-swiper{
+    margin-bottom: -5rem;
+  }
   .logo-nexus {
     height: 51px !important;
     width: 56px !important;
