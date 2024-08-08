@@ -21178,6 +21178,26 @@ disabled look for disabled choices in the results dropdown
   max-height: 100px;
 }
 
+.custom-carousel .carousel-indicators {
+  position: static; /* Remove the absolute positioning */
+  margin-top: 20px; /* Add space above the indicators */
+  text-align: center; /* Center the indicators */
+}
+
+.custom-carousel .carousel-indicators li {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: hotpink;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+/* Change the background color of the active dot */
+.custom-carousel .carousel-indicators .active {
+  background-color: black; /* Active dot color */
+}
+
 @media (min-width: 768px) {
   /* pc */
   #mob-swiper {
@@ -21210,15 +21230,19 @@ disabled look for disabled choices in the results dropdown
 
 @media (max-width: 767.98px) {
   /* phone */
-  .ml{
-    margin-top: 4rem;
+  .ml {
+    margin-top: 5rem;
     height: 100%;
     width: 100%;
+  }
+  .bnr {
+    height: 40vh !important;
+    width: 100% !important;
   }
   #desk-swiper {
     display: none;
   }
-  #mob-swiper{
+  #mob-swiper {
     margin-bottom: -5rem;
   }
   .logo-nexus {
