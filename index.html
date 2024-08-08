@@ -22,6 +22,56 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4rem;
+      }
+
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+      .flip-card-back {
+        background-image: url("images/bg.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* background-image: url("images/bg.jpg"); */
+
+        color: white;
+        transform: rotateY(180deg);
+      }
+    </style>
   </head>
 
   <body>
@@ -275,7 +325,10 @@
               gap: 20;
             "
           >
-            <div style="flex: 1">
+            <div style="flex: 1; margin-right: 20px">
+              <span style="color: white; font-size: x-large; margin-right: 20px"
+                ><i class="fa-solid fa-city"></i> 4 cities</span
+              >
               <p style="color: white; text-align: left">
                 Welcome to Omen Spark, an exhilarating one-month initiative by
                 HP's Omen laptop line. Taking place in four vibrant cities at
@@ -285,7 +338,10 @@
               </p>
             </div>
             <div style="flex: 1">
-              <p style="color: white; text-align: right">
+              <span style="color: white; font-size: x-large">
+                <i class="fa-solid fa-award"></i> 2,00,000 Prize pool</span
+              >
+              <p style="color: white; text-align: left">
                 Experience cutting-edge Omen laptops, participate in thrilling
                 competitions, and explore HP's expertly designed courses to
                 level up your career. Join us to connect with like-minded
@@ -635,73 +691,101 @@
             <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
               <!-- Card-->
 
-              <article class="box-contacts hvcard">
-                <div class="card-body p-4">
-                  <img
-                    src="images/prods/9W1C9PA.jpg"
-                    alt=""
-                    class="img-fluid d-block mx-auto mb-3"
-                  />
-                  <h5><a href="#" class="text-dark">Omen 9W1C9PA</a></h5>
-                  <p class="small text-muted font-italic">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  </p>
+              <div class="flip-card hvcard">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img
+                      src="images/prods/9W1C9PA.jpg"
+                      alt="Avatar"
+                      style="width: 300px; height: 300px"
+                    />
+                    <p>Omen 9W1C9PA</p>
+                  </div>
+                  <div class="flip-card-back">
+                    <p style="padding: 3rem">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Cumque similique temporibus eveniet impedit velit ex dicta
+                      repellendus labore, ea ratione incidunt nihil eum
+                      voluptatum enim perferendis beatae amet, illo magni.
+                    </p>
+                  </div>
                 </div>
-              </article>
+              </div>
             </div>
 
             <div class="hvcard col-lg-3 col-md-6 mb-4 mb-lg-0">
               <!-- Card-->
 
-              <article class="box-contacts hvcard">
-                <div class="card-body p-4">
-                  <img
-                    src="images/prods/9X649PA.jpg"
-                    alt=""
-                    class="img-fluid d-block mx-auto mb-3"
-                  />
-                  <h5><a href="#" class="text-dark">Omen 9X649PA</a></h5>
-                  <p class="small text-muted font-italic">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  </p>
+              <div class="flip-card hvcard">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img
+                      src="images/prods/9X649PA.jpg"
+                      alt="Avatar"
+                      style="width: 300px; height: 300px"
+                    />
+                    <p>Omen 9X649PA</p>
+                  </div>
+                  <div class="flip-card-back">
+                    <p style="padding: 3rem">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Cumque similique temporibus eveniet impedit velit ex dicta
+                      repellendus labore, ea ratione incidunt nihil eum
+                      voluptatum enim perferendis beatae amet, illo magni.
+                    </p>
+                  </div>
                 </div>
-              </article>
+              </div>
             </div>
 
             <div class="hvcard col-lg-3 col-md-6 mb-4 mb-lg-0">
               <!-- Card-->
 
-              <article class="box-contacts hvcard">
-                <div class="card-body p-4">
-                  <img
-                    src="images/prods/A0EH4PA.jpg"
-                    alt=""
-                    class="img-fluid d-block mx-auto mb-3"
-                  />
-                  <h5><a href="#" class="text-dark">Omen A0EH4PA</a></h5>
-                  <p class="small text-muted font-italic">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  </p>
+              <div class="flip-card hvcard">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img
+                      src="images/prods/A0EH4PA.jpg"
+                      alt="Avatar"
+                      style="width: 300px; height: 300px"
+                    />
+                    <p>Omen A0EH4PA</p>
+                  </div>
+                  <div class="flip-card-back">
+                    <p style="padding: 3rem">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Cumque similique temporibus eveniet impedit velit ex dicta
+                      repellendus labore, ea ratione incidunt nihil eum
+                      voluptatum enim perferendis beatae amet, illo magni.
+                    </p>
+                  </div>
                 </div>
-              </article>
+              </div>
             </div>
 
             <div class="hvcard col-lg-3 col-md-6 mb-4 mb-lg-0">
               <!-- Card-->
 
-              <article class="box-contacts hvcard">
-                <div class="card-body p-4">
-                  <img
-                    src="images/prods/A17KGPA.jpg"
-                    alt=""
-                    class="img-fluid d-block mx-auto mb-3"
-                  />
-                  <h5><a href="#" class="text-dark">Omen A17KGPA</a></h5>
-                  <p class="small text-muted font-italic">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  </p>
+              <div class="flip-card hvcard">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img
+                      src="images/prods/A17KGPA.jpg"
+                      alt="Avatar"
+                      style="width: 300px; height: 300px"
+                    />
+                    <p>Omen A17KGPA</p>
+                  </div>
+                  <div class="flip-card-back">
+                    <p style="padding: 3rem">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Cumque similique temporibus eveniet impedit velit ex dicta
+                      repellendus labore, ea ratione incidunt nihil eum
+                      voluptatum enim perferendis beatae amet, illo magni.
+                    </p>
+                  </div>
                 </div>
-              </article>
+              </div>
             </div>
           </div>
         </div>
