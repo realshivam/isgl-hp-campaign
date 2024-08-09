@@ -21147,6 +21147,10 @@ disabled look for disabled choices in the results dropdown
   opacity: 1;
 }
 
+img:hover {
+  cursor: pointer;
+}
+
 .modal-header .close:focus,
 .modal-header .close:hover {
   opacity: 1;
@@ -21214,7 +21218,7 @@ disabled look for disabled choices in the results dropdown
 
   .banner {
     position: relative;
-    height: 12vh;
+    height: 15vh;
   }
 
   .phoneLogo {
@@ -21264,7 +21268,7 @@ disabled look for disabled choices in the results dropdown
 
   .banner {
     position: relative;
-    height: 12vh;
+    height: 15vh;
   }
 
   .phoneLogo {
@@ -21277,7 +21281,10 @@ disabled look for disabled choices in the results dropdown
   }
 
   .rd-navbar-fixed .rd-navbar-panel {
-    height: 12vh;
+    height: 18vh;
+    width: 29rem;
+    margin-left: -0.5rem;
+    margin-top: -0.5rem;
   }
 }
 
