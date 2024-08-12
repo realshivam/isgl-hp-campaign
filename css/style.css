@@ -21207,6 +21207,9 @@ img:hover {
   #mob-swiper {
     display: none;
   }
+  .mobbanner{
+    display: none;
+  }
   .logo-nexus {
     height: 85px !important;
     width: 95px !important;
@@ -21234,13 +21237,17 @@ img:hover {
 
 @media (max-width: 767.98px) {
   /* phone */
+  .deskbanner{
+    
+    display: none;
+  }
   .ml {
     margin-top: 5rem;
     height: 100%;
     width: 100%;
   }
   .bnr {
-    height: 40vh !important;
+    /* height: 40vh !important; */
     width: 100% !important;
   }
   #desk-swiper {

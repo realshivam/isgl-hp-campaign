@@ -165,86 +165,16 @@
 
         <!-- Swiper-->
 
-        <!-- <section
-          class="section swiper-container swiper-slider swiper-slider-classic"
-          data-loop="true"
-          data-autoplay="4859"
-          data-simulate-touch="true"
-          data-direction="vertical"
-          data-nav="false"
-          id="desk-swiper"
-        >
-          <div class="swiper-wrapper text-center">
-            <div
-              class="swiper-slide"
-              data-slide-bg="images/banner/bnr1.png"
-              style="object-fit: contain"
-            >
-              <div class="swiper-slide-caption section-md">
-                <div class="container">
-                  <h1
-                    data-caption-animate="fadeInLeft"
-                    data-caption-delay="0"
-                  ></h1>
-                  <p
-                    class="text-width-large"
-                    data-caption-animate="fadeInRight"
-                    data-caption-delay="100"
-                  ></p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide" data-slide-bg="images/banner/bn2.png">
-              <div class="swiper-slide-caption section-md">
-                <div class="container">
-                  <h1
-                    data-caption-animate="fadeInLeft"
-                    data-caption-delay="0"
-                  ></h1>
-                  <p
-                    class="text-width-large"
-                    data-caption-animate="fadeInRight"
-                    data-caption-delay="100"
-                  ></p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide" data-slide-bg="images/banner/bnr3.png">
-              <div class="swiper-slide-caption section-md">
-                <div class="container">
-                  <h1
-                    data-caption-animate="fadeInLeft"
-                    data-caption-delay="0"
-                  ></h1>
-                  <p
-                    class="text-width-large"
-                    data-caption-animate="fadeInRight"
-                    data-caption-delay="100"
-                  ></p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-pagination__module">
-            <div class="swiper-pagination__fraction">
-              <span class="swiper-pagination__fraction-index">00</span
-              ><span class="swiper-pagination__fraction-divider">/</span
-              ><span class="swiper-pagination__fraction-count">00</span>
-            </div>
-            <div class="swiper-pagination__divider"></div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </section> -->
+        <!-- desktop banner --->
 
         <div
           id="carouselExampleIndicators1"
-          class="carousel slide ml custom-carousel"
+          class="carousel slide ml custom-carousel deskbanner"
           data-ride="carousel"
         >
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <a href="#contacts">
+              <a href="https://www.edx.org/school/hp" target="_blank">
                 <img
                   class="d-block w-100 bnr"
                   src="images/banner/bnr1.png"
@@ -305,13 +235,75 @@
           </a>
         </div>
 
-        <!-- <section
-          class="section swiper-container swiper-slider swiper-slider-classic"
+        <!--- Mobile banner--->
+
+        <div
+          id="carouselExampleIndicators3"
+          class="carousel slide ml custom-carousel mobbanner"
+          data-ride="carousel"
         >
-          <div class="swiper-wrapper text-center">
-            <img src="./images/Poster.png" alt="" class="poster" />
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a>
+                <img
+                  class="d-block w-100 bnr"
+                  src="images/banner/bnr1-mob.png"
+                  alt="First slide"
+              /></a>
+            </div>
+            <div class="carousel-item">
+              <a href="https://www.edx.org/school/hp" target="_blank">
+                <img
+                  class="d-block w-100 bnr"
+                  src="images/banner/bn2-mob.png"
+                  alt="Second slide"
+                />
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="#contacts">
+                <img
+                  class="d-block w-100 bnr"
+                  src="images/banner/bnr3-mob.png"
+                  alt="Third slide"
+                />
+              </a>
+            </div>
           </div>
-        </section> -->
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselExampleIndicators3"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li
+              data-target="#carouselExampleIndicators3"
+              data-slide-to="1"
+            ></li>
+            <li
+              data-target="#carouselExampleIndicators3"
+              data-slide-to="2"
+            ></li>
+          </ol>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleIndicators3"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleIndicators3"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
       </div>
 
       <!-- About Section-->
